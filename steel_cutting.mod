@@ -29,14 +29,8 @@ param t{j in Barras}, integer, >= 0; # indica comprimento da sobra do estoque j
 
 # ---------------------------- Variáveis de Decisão ---------------------------- #
 
-# indica se a barra j será usada
-var y{j in Barras}, binary;
-
 # valor de perda da barra j (sobras com comprimento menor que N) 
 
-
-# indica se a barra j tem sobras
-var u{j in Barras}, binary;
 
 # indica o indice do peça que foi cortado
 var x{i in Pecas, j in Barras}, integer, >=0;
@@ -48,6 +42,12 @@ var z{i in Pecas, j in Barras, k in K[i]}, binary;
 # Barra j (b=1 se a k-ésima peça do item i foi usada no estoque j) 
 var b{i in Pecas, j in Barras, k in K[i]}, binary;
 
+# indica se a barra j tem sobras
+var u{j in Barras}, binary;
+
+# indica se a barra j será usada
+var y{j in Barras}, binary;
+
 
 # ---------------------------- Funções Objetivo Avaliadas ---------------------------- #
 
@@ -58,27 +58,27 @@ sum{i in Pecas,k in K[i], j in Barras} z[i,j,k];
 
 # ---------------------------- Restrições ---------------------------- #
 
-# O padrão de corte ideal para cada um dos estoques é definido por variáveis de decisão
+# Restrição 8: O padrão de corte ideal para cada um dos estoques é definido por variáveis de decisão
 s.t. padraoIdeal{j in Barras}: sum{i in Pecas} x[i,j]*w[i] 
 + sum{i in Pecas, k in K[i]} z[i,j,k] *(w[i]-alfa[i,j,k]) 
 + sum{i in Pecas, k in K[i], l in Barras: l != j} b[i,j,k]*alfa[i,l,k]+t[j] = c*y[j];
 
-# garante que todas as demandas de cada item serão atendidas
+# Restrição 9: garante que todas as demandas de cada item serão atendidas
 s.t. demanda{i in Pecas}: sum{j in Barras} x[i, j]+ sum{j in Barras, k in K[i]} z[i, j, k] = v[i];
 
-#  garante que partes residuais de pecas divididos sejam usadas.
+#  Restrição 10: garante que partes residuais de pecas divididos sejam usadas.
 s.t. pecasUsadas{i in Pecas}: sum{j in Barras, k in K[i]} z[i,j,k] = sum{k in K[i], j in Barras}b[i,j,k];
 
-#  controla que apenas uma peça não dividida pode ser dividida e usada em um único padrão de corte.
+#  Restrição 11: controla que apenas uma peça não dividida pode ser dividida e usada em um único padrão de corte.
 s.t. sePecaUsada: sum{i in Pecas, j in Barras, k in K[i]} z[i,j,k] <= 1;
 
-# controlam que os comprimentos das peças de um barra dividido são maiores ou iguais que o limite inferior predefinido.
+# Restrição 12: controlam que os comprimentos das peças de um barra dividido são maiores ou iguais que o limite inferior predefinido.
 s.t. controleDivisaoAlfa{i in Pecas, j in Barras, k in K[i]}: alfa[i,j,k] >= theta;
 
-# controlam que os comprimentos das peças de um barra dividido são maiores ou iguais que o limite inferior predefinido.
+# Restrição 13: controlam que os comprimentos das peças de um barra dividido são maiores ou iguais que o limite inferior predefinido.
 s.t. controleSobras{i in Pecas, j in Barras, k in K[i]}: w[i] - alfa[i,j,k] >= theta;
 
-# Determina se sobras dos estoques podem ser utilizadas no futuro
+# Restrição 14: Determina se sobras dos estoques podem ser utilizadas no futuro
 s.t. sobrasUteissobrasUteis{j in Barras}: v[j] = if (t[j] >= theta) then 0 else 1;
 #param v{j in Pecas} := if t[j] > beta then 0 else 1;
 
@@ -95,6 +95,7 @@ set K[3]:= 1..3;
 
 param m := 3;
 param n := 3;
+param c := 100;
 
 param beta := 1;
 param theta := 2;
