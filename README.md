@@ -1,0 +1,4 @@
+# Trabalho Otimizacao
+
+Implementação baseada no artigo **ONE-DIMENSIONAL CUTTING STOCK PROBLEM WITH DIVISIBLE
+ITEMS: A CASE STUDY IN STEEL INDUSTRY**.
