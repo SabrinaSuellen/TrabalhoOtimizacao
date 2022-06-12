@@ -2,7 +2,6 @@
 	Dupla: 
 		Sabrina Suellen 1814122
 		Victor Hugo      1824050
-
 	Artigo: One-Dimensional Cutting Stock Problem with Divisible Items: A Case Study in Steel Industry
 */
 
@@ -20,10 +19,10 @@ param beta,  integer, >=0; # limite inferior para perca de material
 param theta integer, >=0; # limite inferior para soldagem
 param gamma, integer, >=0; # custo de 1mm de perda de material
 param delta, integer, >=0; # custo de uma operação de soldagem
-param alfa{i in Pecas, l in Barras, k in K[i]}, integer, >=0; # indica o comprimento da Peça i dividida da Barra j
+param alfa{i in Pecas, j in Barras, k in K[i]}, integer, >=0; # indica o comprimento da Peça i dividida da Barra j
 
 param c; # comprimento da barra j
-param v{i in Pecas}, integer, >=0; # quantidade demandada da peça i
+param v{j in Barras}, integer, >=0; # quantidade demandada da peça i
 param w{i in Pecas}, integer, >=0; # comprimento da peça i
 
 param t{j in Barras}, integer, >= 0; # indica comprimento da sobra do estoque j
@@ -81,8 +80,7 @@ s.t. controleSobras{i in Pecas, j in Barras, k in K[i]}: w[i] - alfa[i,j,k] >= t
 
 # Determina se sobras dos estoques podem ser utilizadas no futuro
 s.t. sobrasUteissobrasUteis{j in Barras}: v[j] = if (t[j] >= theta) then 0 else 1;
-
-#param v{j in Pecas} := if t[j] > beta then 0 else 1; 
+#param v{j in Pecas} := if t[j] > beta then 0 else 1;
 
 # Restrições de 15 a 18 definidas na declaração das variáveis
 
@@ -90,9 +88,10 @@ solve;
 
 data;
 
-set K[1]:= 1..6;
+set K[1]:= 1..3;
 set K[2]:= 1..3;
-set K[3]:= 1..4;
+set K[3]:= 1..3;
+
 
 param m := 3;
 param n := 3;
@@ -108,9 +107,9 @@ param delta := 2;
 #	2 45
 #	3 37;
 param v := 
-	1 600
-	2 330
-	3 700;
+	1 3
+	2 3
+	3 3;
 param w := 
 	1 20
 	2 10
@@ -122,11 +121,17 @@ param t :=
 	3 8;
 
 param alfa :=
-	1 14
-	2 20
-	3 8;
+[*, *, 1]: 1 2 3 :=
+	1 1 1 1
+	2 1 1 1
+	3 1 1 1
+[*, *, 2]: 1 2 3 :=
+	1 1 3 2
+	2 1 2 3
+	3 1 3 2
+[*, *, 3]: 1 2 3 :=
+	1 1 2 3
+	2 1 2 3
+	3 1 2 3;
 
 end;
-
-# restrição 14
-# inserir k's e l's
