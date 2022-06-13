@@ -1,5 +1,5 @@
 Problem:    steel_cutting
-Rows:       68
+Rows:       70
 Columns:    69 (69 integer, 60 binary)
 Non-zeros:  213
 Status:     INTEGER EMPTY
@@ -10,11 +10,11 @@ Objective:  barras_e_perdas = 0 (MINimum)
      1 barras_e_perdas
                                    0                             
      2 padraoIdeal[1]
-                                   0           -14             = 
+                                   0          -200             = 
      3 padraoIdeal[2]
-                                   0           -20             = 
+                                   0          -120             = 
      4 padraoIdeal[3]
-                                   0            -8             = 
+                                   0          -340             = 
      5 demanda[1]                  0             6             = 
      6 demanda[2]                  0            12             = 
      7 demanda[3]                  0            24             = 
@@ -24,120 +24,125 @@ Objective:  barras_e_perdas = 0 (MINimum)
                                    0            -0             = 
     10 pecasUsadas[3]
                                    0            -0             = 
-    11 sePecaUsada                 0                           1 
-    12 controleDivisaoAlfa[1,1,1]
-                                   0           -21               
-    13 controleDivisaoAlfa[1,1,2]
-                                   0            -6               
-    14 controleDivisaoAlfa[1,1,3]
-                                   0           -11               
-    15 controleDivisaoAlfa[1,2,1]
-                                   0           -46               
-    16 controleDivisaoAlfa[1,2,2]
-                                   0           -56               
-    17 controleDivisaoAlfa[1,2,3]
-                                   0           -11               
-    18 controleDivisaoAlfa[1,3,1]
-                                   0           -21               
-    19 controleDivisaoAlfa[1,3,2]
-                                   0           -26               
-    20 controleDivisaoAlfa[1,3,3]
-                                   0           -66               
-    21 controleDivisaoAlfa[2,1,1]
-                                   0           -46               
-    22 controleDivisaoAlfa[2,1,2]
-                                   0           -16               
-    23 controleDivisaoAlfa[2,1,3]
-                                   0           -46               
-    24 controleDivisaoAlfa[2,2,1]
-                                   0           -21               
-    25 controleDivisaoAlfa[2,2,2]
-                                   0           -46               
-    26 controleDivisaoAlfa[2,2,3]
-                                   0           -21               
-    27 controleDivisaoAlfa[2,3,1]
-                                   0           -21               
-    28 controleDivisaoAlfa[2,3,2]
-                                   0           -26               
-    29 controleDivisaoAlfa[2,3,3]
-                                   0           -21               
-    30 controleDivisaoAlfa[3,1,1]
-                                   0           -21               
-    31 controleDivisaoAlfa[3,1,2]
-                                   0            -1               
-    32 controleDivisaoAlfa[3,1,3]
-                                   0           -21               
-    33 controleDivisaoAlfa[3,2,1]
-                                   0           -21               
-    34 controleDivisaoAlfa[3,2,2]
-                                   0           -86               
-    35 controleDivisaoAlfa[3,2,3]
-                                   0           -21               
-    36 controleDivisaoAlfa[3,3,1]
-                                   0           -46               
-    37 controleDivisaoAlfa[3,3,2]
-                                   0            -1               
-    38 controleDivisaoAlfa[3,3,3]
-                                   0           -46               
-    39 controleSobras[1,1,1]
-                                   0             9               
-    40 controleSobras[1,1,2]
-                                   0            -6               
-    41 controleSobras[1,1,3]
-                                   0            -1               
-    42 controleSobras[1,2,1]
-                                   0            34               
-    43 controleSobras[1,2,2]
-                                   0            44               
-    44 controleSobras[1,2,3]
-                                   0            -1               
-    45 controleSobras[1,3,1]
-                                   0             9               
-    46 controleSobras[1,3,2]
-                                   0            14               
-    47 controleSobras[1,3,3]
-                                   0            54               
-    48 controleSobras[2,1,1]
-                                   0            44               
-    49 controleSobras[2,1,2]
-                                   0            14               
-    50 controleSobras[2,1,3]
-                                   0            44               
-    51 controleSobras[2,2,1]
-                                   0            19               
-    52 controleSobras[2,2,2]
-                                   0            44               
-    53 controleSobras[2,2,3]
-                                   0            19               
-    54 controleSobras[2,3,1]
-                                   0            19               
-    55 controleSobras[2,3,2]
-                                   0            24               
-    56 controleSobras[2,3,3]
-                                   0            19               
-    57 controleSobras[3,1,1]
-                                   0            14               
-    58 controleSobras[3,1,2]
-                                   0            -6               
-    59 controleSobras[3,1,3]
-                                   0            14               
-    60 controleSobras[3,2,1]
-                                   0            14               
-    61 controleSobras[3,2,2]
-                                   0            79               
-    62 controleSobras[3,2,3]
-                                   0            14               
-    63 controleSobras[3,3,1]
-                                   0            39               
-    64 controleSobras[3,3,2]
-                                   0            -6               
-    65 controleSobras[3,3,3]
-                                   0            39               
-    66 sobrasUteissobrasUteis[1]
+    11 sePecaUsada[1]
+                                   0                           1 
+    12 sePecaUsada[2]
+                                   0                           1 
+    13 sePecaUsada[3]
+                                   0                           1 
+    14 controleDivisaoAlfa[1,1,1]
+                                   0           175               
+    15 controleDivisaoAlfa[1,1,2]
+                                   0           190               
+    16 controleDivisaoAlfa[1,1,3]
+                                   0           185               
+    17 controleDivisaoAlfa[1,2,1]
+                                   0           150               
+    18 controleDivisaoAlfa[1,2,2]
+                                   0           140               
+    19 controleDivisaoAlfa[1,2,3]
+                                   0           185               
+    20 controleDivisaoAlfa[1,3,1]
+                                   0           175               
+    21 controleDivisaoAlfa[1,3,2]
+                                   0           170               
+    22 controleDivisaoAlfa[1,3,3]
+                                   0           130               
+    23 controleDivisaoAlfa[2,1,1]
+                                   0           150               
+    24 controleDivisaoAlfa[2,1,2]
+                                   0           180               
+    25 controleDivisaoAlfa[2,1,3]
+                                   0           150               
+    26 controleDivisaoAlfa[2,2,1]
+                                   0           175               
+    27 controleDivisaoAlfa[2,2,2]
+                                   0           150               
+    28 controleDivisaoAlfa[2,2,3]
+                                   0           175               
+    29 controleDivisaoAlfa[2,3,1]
+                                   0           175               
+    30 controleDivisaoAlfa[2,3,2]
+                                   0           170               
+    31 controleDivisaoAlfa[2,3,3]
+                                   0           175               
+    32 controleDivisaoAlfa[3,1,1]
+                                   0           175               
+    33 controleDivisaoAlfa[3,1,2]
+                                   0           195               
+    34 controleDivisaoAlfa[3,1,3]
+                                   0           175               
+    35 controleDivisaoAlfa[3,2,1]
+                                   0           175               
+    36 controleDivisaoAlfa[3,2,2]
+                                   0           110               
+    37 controleDivisaoAlfa[3,2,3]
+                                   0           175               
+    38 controleDivisaoAlfa[3,3,1]
+                                   0           150               
+    39 controleDivisaoAlfa[3,3,2]
+                                   0           195               
+    40 controleDivisaoAlfa[3,3,3]
+                                   0           150               
+    41 controleSobras[1,1,1]
+                                   0           125               
+    42 controleSobras[1,1,2]
+                                   0           110               
+    43 controleSobras[1,1,3]
+                                   0           115               
+    44 controleSobras[1,2,1]
+                                   0           150               
+    45 controleSobras[1,2,2]
+                                   0           160               
+    46 controleSobras[1,2,3]
+                                   0           115               
+    47 controleSobras[1,3,1]
+                                   0           125               
+    48 controleSobras[1,3,2]
+                                   0           130               
+    49 controleSobras[1,3,3]
+                                   0           170               
+    50 controleSobras[2,1,1]
+                                   0           150               
+    51 controleSobras[2,1,2]
+                                   0           120               
+    52 controleSobras[2,1,3]
+                                   0           150               
+    53 controleSobras[2,2,1]
+                                   0           125               
+    54 controleSobras[2,2,2]
+                                   0           150               
+    55 controleSobras[2,2,3]
+                                   0           125               
+    56 controleSobras[2,3,1]
+                                   0           125               
+    57 controleSobras[2,3,2]
+                                   0           130               
+    58 controleSobras[2,3,3]
+                                   0           125               
+    59 controleSobras[3,1,1]
+                                   0           125               
+    60 controleSobras[3,1,2]
+                                   0           105               
+    61 controleSobras[3,1,3]
+                                   0           125               
+    62 controleSobras[3,2,1]
+                                   0           125               
+    63 controleSobras[3,2,2]
+                                   0           190               
+    64 controleSobras[3,2,3]
+                                   0           125               
+    65 controleSobras[3,3,1]
+                                   0           150               
+    66 controleSobras[3,3,2]
+                                   0           105               
+    67 controleSobras[3,3,3]
+                                   0           150               
+    68 sobrasUteissobrasUteis[1]
                                    0            -6             = 
-    67 sobrasUteissobrasUteis[2]
-                                   0           -12             = 
-    68 sobrasUteissobrasUteis[3]
+    69 sobrasUteissobrasUteis[2]
+                                   0           -11             = 
+    70 sobrasUteissobrasUteis[3]
                                    0           -24             = 
 
    No. Column name       Activity     Lower bound   Upper bound
@@ -151,66 +156,66 @@ Objective:  barras_e_perdas = 0 (MINimum)
      7 x[1,3]       *              0             0               
      8 x[2,3]       *              0             0               
      9 x[3,3]       *              0             0               
-    10 z[1,1,1]     *              0             0             1 
-    11 z[1,2,1]     *              0             0             1 
-    12 z[1,3,1]     *              0             0             1 
-    13 z[1,1,2]     *              0             0             1 
-    14 z[1,2,2]     *              0             0             1 
-    15 z[1,3,2]     *              0             0             1 
-    16 z[1,1,3]     *              0             0             1 
-    17 z[1,2,3]     *              0             0             1 
-    18 z[1,3,3]     *              0             0             1 
-    19 z[2,1,1]     *              0             0             1 
-    20 z[2,2,1]     *              0             0             1 
-    21 z[2,3,1]     *              0             0             1 
-    22 z[2,1,2]     *              0             0             1 
-    23 z[2,2,2]     *              0             0             1 
-    24 z[2,3,2]     *              0             0             1 
-    25 z[2,1,3]     *              0             0             1 
-    26 z[2,2,3]     *              0             0             1 
-    27 z[2,3,3]     *              0             0             1 
-    28 z[3,1,1]     *              0             0             1 
-    29 z[3,2,1]     *              0             0             1 
-    30 z[3,3,1]     *              0             0             1 
-    31 z[3,1,2]     *              0             0             1 
-    32 z[3,2,2]     *              0             0             1 
-    33 z[3,3,2]     *              0             0             1 
-    34 z[3,1,3]     *              0             0             1 
-    35 z[3,2,3]     *              0             0             1 
-    36 z[3,3,3]     *              0             0             1 
-    37 b[1,1,1]     *              0             0             1 
-    38 b[1,1,2]     *              0             0             1 
-    39 b[1,1,3]     *              0             0             1 
-    40 b[2,1,1]     *              0             0             1 
-    41 b[2,1,2]     *              0             0             1 
-    42 b[2,1,3]     *              0             0             1 
-    43 b[3,1,1]     *              0             0             1 
-    44 b[3,1,2]     *              0             0             1 
-    45 b[3,1,3]     *              0             0             1 
-    46 b[1,2,1]     *              0             0             1 
-    47 b[1,2,2]     *              0             0             1 
-    48 b[1,2,3]     *              0             0             1 
-    49 b[2,2,1]     *              0             0             1 
-    50 b[2,2,2]     *              0             0             1 
-    51 b[2,2,3]     *              0             0             1 
-    52 b[3,2,1]     *              0             0             1 
-    53 b[3,2,2]     *              0             0             1 
-    54 b[3,2,3]     *              0             0             1 
-    55 b[1,3,1]     *              0             0             1 
-    56 b[1,3,2]     *              0             0             1 
-    57 b[1,3,3]     *              0             0             1 
-    58 b[2,3,1]     *              0             0             1 
-    59 b[2,3,2]     *              0             0             1 
-    60 b[2,3,3]     *              0             0             1 
-    61 b[3,3,1]     *              0             0             1 
-    62 b[3,3,2]     *              0             0             1 
-    63 b[3,3,3]     *              0             0             1 
-    64 u[1]         *              0             0             1 
-    65 u[2]         *              0             0             1 
-    66 u[3]         *              0             0             1 
-    67 y[1]         *              0             0             1 
-    68 y[2]         *              0             0             1 
-    69 y[3]         *              0             0             1 
+    10 y[1]         *              0             0             1 
+    11 y[2]         *              0             0             1 
+    12 y[3]         *              0             0             1 
+    13 z[1,1,1]     *              0             0             1 
+    14 z[1,2,1]     *              0             0             1 
+    15 z[1,3,1]     *              0             0             1 
+    16 z[1,1,2]     *              0             0             1 
+    17 z[1,2,2]     *              0             0             1 
+    18 z[1,3,2]     *              0             0             1 
+    19 z[1,1,3]     *              0             0             1 
+    20 z[1,2,3]     *              0             0             1 
+    21 z[1,3,3]     *              0             0             1 
+    22 z[2,1,1]     *              0             0             1 
+    23 z[2,2,1]     *              0             0             1 
+    24 z[2,3,1]     *              0             0             1 
+    25 z[2,1,2]     *              0             0             1 
+    26 z[2,2,2]     *              0             0             1 
+    27 z[2,3,2]     *              0             0             1 
+    28 z[2,1,3]     *              0             0             1 
+    29 z[2,2,3]     *              0             0             1 
+    30 z[2,3,3]     *              0             0             1 
+    31 z[3,1,1]     *              0             0             1 
+    32 z[3,2,1]     *              0             0             1 
+    33 z[3,3,1]     *              0             0             1 
+    34 z[3,1,2]     *              0             0             1 
+    35 z[3,2,2]     *              0             0             1 
+    36 z[3,3,2]     *              0             0             1 
+    37 z[3,1,3]     *              0             0             1 
+    38 z[3,2,3]     *              0             0             1 
+    39 z[3,3,3]     *              0             0             1 
+    40 b[1,1,1]     *              0             0             1 
+    41 b[1,1,2]     *              0             0             1 
+    42 b[1,1,3]     *              0             0             1 
+    43 b[2,1,1]     *              0             0             1 
+    44 b[2,1,2]     *              0             0             1 
+    45 b[2,1,3]     *              0             0             1 
+    46 b[3,1,1]     *              0             0             1 
+    47 b[3,1,2]     *              0             0             1 
+    48 b[3,1,3]     *              0             0             1 
+    49 b[1,2,1]     *              0             0             1 
+    50 b[1,2,2]     *              0             0             1 
+    51 b[1,2,3]     *              0             0             1 
+    52 b[2,2,1]     *              0             0             1 
+    53 b[2,2,2]     *              0             0             1 
+    54 b[2,2,3]     *              0             0             1 
+    55 b[3,2,1]     *              0             0             1 
+    56 b[3,2,2]     *              0             0             1 
+    57 b[3,2,3]     *              0             0             1 
+    58 b[1,3,1]     *              0             0             1 
+    59 b[1,3,2]     *              0             0             1 
+    60 b[1,3,3]     *              0             0             1 
+    61 b[2,3,1]     *              0             0             1 
+    62 b[2,3,2]     *              0             0             1 
+    63 b[2,3,3]     *              0             0             1 
+    64 b[3,3,1]     *              0             0             1 
+    65 b[3,3,2]     *              0             0             1 
+    66 b[3,3,3]     *              0             0             1 
+    67 u[1]         *              0             0             1 
+    68 u[2]         *              0             0             1 
+    69 u[3]         *              0             0             1 
 
 Integer feasibility conditions:
 
@@ -218,8 +223,8 @@ KKT.PE: max.abs.err = 0.00e+00 on row 0
         max.rel.err = 0.00e+00 on row 0
         High quality
 
-KKT.PB: max.abs.err = 7.90e+01 on row 61
-        max.rel.err = 9.88e-01 on row 61
+KKT.PB: max.abs.err = 3.40e+02 on row 4
+        max.rel.err = 9.97e-01 on row 4
         SOLUTION IS INFEASIBLE
 
 End of output
